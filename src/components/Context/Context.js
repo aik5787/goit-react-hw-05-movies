@@ -48,9 +48,8 @@ export function Context({ children }) {
         return;
       }
       setMovieDetails(dataMovieDetail);
-
-      return true;
       // console.log(movieDetails);
+      return true;
     } catch (error) {
       console.error('Error fetching movie details:', error);
       return false;

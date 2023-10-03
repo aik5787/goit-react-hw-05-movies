@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useMoviesContext } from '../Context/Context';
+import { useMoviesContext } from '../../Context/Context';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -8,9 +8,9 @@ const Reviews = () => {
 
   useEffect(() => {
     getMovieReviews(movieId);
-  }, [movieId, getMovieReviews]);
+  }, [movieId]);
 
-  console.log(movieReviews);
+  // console.log(movieReviews);
 
   return (
     <div>

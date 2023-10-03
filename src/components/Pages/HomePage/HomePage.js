@@ -1,6 +1,12 @@
 import { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useMoviesContext } from '../Context/Context';
+import { useMoviesContext } from '../../Context/Context';
+import {
+  ListContainer,
+  HomePageTitle,
+  HomePageList,
+  StyledNavLink,
+} from './HomePage.styled';
 
 const HomePage = () => {
   const location = useLocation();
@@ -9,21 +15,21 @@ const HomePage = () => {
 
   useEffect(() => {
     getTrendingMovies();
-  }, [getTrendingMovies]);
+  }, []);
 
   return (
-    <>
-      <h2>Trending today</h2>
-      <ul>
+    <ListContainer>
+      <HomePageTitle>Trending today</HomePageTitle>
+      <HomePageList>
         {movies.map(movie => (
           <li key={movie.id}>
-            <NavLink to={`/movies/${movie.id}`} state={location}>
+            <StyledNavLink to={`/movies/${movie.id}`} state={location}>
               {movie.name || movie.title}
-            </NavLink>
+            </StyledNavLink>
           </li>
         ))}
-      </ul>
-    </>
+      </HomePageList>
+    </ListContainer>
   );
 };
 export default HomePage;

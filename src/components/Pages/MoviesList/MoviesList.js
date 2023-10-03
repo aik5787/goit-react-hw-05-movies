@@ -1,22 +1,28 @@
-import { useMoviesContext } from '../Context/Context';
+import { useMoviesContext } from '../../Context/Context';
 import { NavLink, useLocation } from 'react-router-dom';
+
+import {
+  ListContainer,
+  MoviePageList,
+  StyledNavLink,
+} from './MovieList.styled';
 
 const MoviesList = () => {
   const { movieRequest } = useMoviesContext();
   const location = useLocation();
 
   return (
-    <div>
-      <ul>
+    <ListContainer>
+      <MoviePageList>
         {movieRequest.map(movie => (
           <li key={movie.id}>
-            <NavLink to={`/movies/${movie.id}`} state={location}>
+            <StyledNavLink to={`/movies/${movie.id}`} state={location}>
               {movie.name || movie.title}
-            </NavLink>
+            </StyledNavLink>
           </li>
         ))}
-      </ul>
-    </div>
+      </MoviePageList>
+    </ListContainer>
   );
 };
 

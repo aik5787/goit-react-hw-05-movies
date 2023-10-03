@@ -1,14 +1,21 @@
-import React, { lazy } from 'react';
+// import React, { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Context } from './Context/Context';
 import Layout from './Layout/Layout';
 
-const HomePage = lazy(() => import('./Pages/HomePage/HomePage'));
-const Movies = lazy(() => import('./Pages/Movies/Movies'));
-const MovieDetails = lazy(() => import('./Pages/MovieDetails/MovieDetails'));
-const Cast = lazy(() => import('./Pages/Cast/Cast'));
-const Reviews = lazy(() => import('./Pages/Reviews/Reviews'));
-const MovieList = lazy(() => import('./Pages/MoviesList/MoviesList'));
+import HomePage from './Pages/HomePage/HomePage';
+import Movies from './Pages/Movies/Movies';
+import MovieDetails from './Pages/MovieDetails/MovieDetails';
+import Cast from './Pages/Cast/Cast';
+import Reviews from './Pages/Reviews/Reviews';
+import MovieList from './Pages/MoviesList/MoviesList';
+
+// const HomePage = lazy(() => import('./Pages/HomePage/HomePage'));
+// const Movies = lazy(() => import('./Pages/Movies/Movies'));
+// const MovieDetails = lazy(() => import('./Pages/MovieDetails/MovieDetails'));
+// const Cast = lazy(() => import('./Pages/Cast/Cast'));
+// const Reviews = lazy(() => import('./Pages/Reviews/Reviews'));
+// const MovieList = lazy(() => import('./Pages/MoviesList/MoviesList'));
 
 const App = () => {
   return (

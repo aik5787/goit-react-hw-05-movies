@@ -29,7 +29,7 @@ export function Context({ children }) {
     try {
       const data = await fetchTrendingMovies();
       setMovies(data.results);
-      // console.log(data.results);
+      console.log(data.results);
     } catch (error) {
       console.error('Error fetching trending movies:', error);
     } finally {
@@ -48,7 +48,7 @@ export function Context({ children }) {
         return;
       }
       setMovieDetails(dataMovieDetail);
-      // console.log(movieDetails);
+      console.log(movieDetails);
       return true;
     } catch (error) {
       console.error('Error fetching movie details:', error);

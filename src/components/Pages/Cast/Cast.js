@@ -10,7 +10,7 @@ const Cast = () => {
 
   useEffect(() => {
     getMovieCast(movieId);
-  }, [movieId]);
+  }, [movieId, getMovieCast]);
 
   // console.log(movieCast);
 

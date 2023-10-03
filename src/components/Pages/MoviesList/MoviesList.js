@@ -1,5 +1,5 @@
 import { useMoviesContext } from '../../Context/Context';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import {
   ListContainer,

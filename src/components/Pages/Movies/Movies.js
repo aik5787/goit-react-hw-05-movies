@@ -18,7 +18,7 @@ const Movies = () => {
     if (query) {
       setSearchParams({ query: query });
     }
-  }, [searchParams]);
+  }, [searchParams, setSearchParams]);
 
   const handleChange = e => {
     const inputValue = e.target.value;

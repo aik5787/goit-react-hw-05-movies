@@ -42,11 +42,7 @@ const MoviesDetails = () => {
       {Object.keys(movieDetails).length > 0 ? (
         <MovieDetailsContainer>
           <MovieDetailsImg
-            src={
-              movieDetails.profile_path
-                ? `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`
-                : 'https://cdn-icons-png.flaticon.com/512/2922/2922506.png'
-            }
+            src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}
             alt="Movie Poster"
             width={300}
             height={400}

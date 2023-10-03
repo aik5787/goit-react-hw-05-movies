@@ -5,14 +5,14 @@ import { useMoviesContext } from '../Context/Context';
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { movieRequest, getMovieRequest } = useMoviesContext();
+  const { getMovieRequest } = useMoviesContext();
 
   useEffect(() => {
     const query = searchParams.get('query');
     if (query) {
       setSearchParams({ query: query });
     }
-  }, [searchParams]);
+  }, [searchParams, setSearchParams]);
 
   const handleChange = e => {
     const inputValue = e.target.value;

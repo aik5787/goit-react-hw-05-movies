@@ -9,7 +9,7 @@ const HomePage = () => {
 
   useEffect(() => {
     getTrendingMovies();
-  }, []);
+  }, [getTrendingMovies]);
 
   return (
     <>

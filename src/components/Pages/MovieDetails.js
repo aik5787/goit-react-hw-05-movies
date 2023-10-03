@@ -27,7 +27,7 @@ const MoviesDetails = () => {
       .catch(error => {
         console.error('Error fetching movie details:', error);
       });
-  }, [movieId, navigate]);
+  }, [movieId, navigate, getMovieDetails]);
 
   return (
     <div>

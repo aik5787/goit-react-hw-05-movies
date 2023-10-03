@@ -8,7 +8,7 @@ const Reviews = () => {
 
   useEffect(() => {
     getMovieReviews(movieId);
-  }, [movieId]);
+  }, [movieId, getMovieReviews]);
 
   console.log(movieReviews);
 

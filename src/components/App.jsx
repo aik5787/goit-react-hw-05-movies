@@ -14,7 +14,7 @@ const App = () => {
   return (
     <Context>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="goit-react-hw-05-movies/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="movies" element={<Movies />}>
             <Route index element={<MovieList />}></Route>
